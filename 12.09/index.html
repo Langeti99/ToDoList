@@ -9,17 +9,111 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="header">
-        <p>Name</p>
-        <p>Created</p>
-        <p>Category</p>
-        <p>Content</p>
-        <p>Dates</p>
-        <ul>
-          <li><button>archive</button></li>
-          <li><button>delete all</button></li>
-        </ul>
+      <div class="todos">
+        <div class="header">
+          <p>Name</p>
+          <p>Created</p>
+          <p>Category</p>
+          <p>Content</p>
+          <p>Dates</p>
+          <ul>
+            <li><button>archive</button></li>
+            <li><button>delete all</button></li>
+          </ul>
+        </div>
+
+        <div class="content">
+          <div class="todos">
+            <div class="item">
+              <div class="title">
+                <img src="./img/cartIcon.png" alt="cart" />
+                <h2>Shoping List</h2>
+              </div>
+              <time datetime="2022-09-13 13:00">13.09.22</time>
+              <p>Task</p>
+              <p>Description</p>
+              <time datetime="2022-09-13 13:00">13.09.22</time>
+              <ul>
+                <li><button>edit</button></li>
+                <li><button>archive</button></li>
+                <li><button>delete</button></li>
+              </ul>
+            </div>
+            <div class="item">
+              <div class="title">
+                <img src="./img/cartIcon.png" alt="cart" />
+                <h2>Shoping List</h2>
+              </div>
+              <time datetime="2022-09-13 13:00">13.09.22</time>
+              <p>Task</p>
+              <p>Description</p>
+              <time datetime="2022-09-13 13:00">13.09.22</time>
+              <ul>
+                <li><button>edit</button></li>
+                <li><button>archive</button></li>
+                <li><button>delete</button></li>
+              </ul>
+            </div>
+          </div>
+          <button class="create-btn">Create Note</button>
+        </div>
       </div>
+      <div class="archive">
+        <div class="header">
+          <p>Note Category</p>
+          <p>Active</p>
+          <p>Archived</p>
+        </div>
+        <div class="archiveToDos">
+          <div class="item">
+            <div class="title">
+              <img src="./img/cartIcon.png" alt="cart" />
+              <h2>Task</h2>
+            </div>
+            <p>13</p>
+            <p>4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-window">
+        <form action="#">
+          <h2>Add list item</h2>
+          <label for="inputTitle">
+            <h3>Заголовок</h3>
+            <input
+              type="text"
+              placeholder="Введіть заголовок"
+              id="inputTitle"
+            />
+          </label>
+          <label for="inputDate">
+            <h3>Дата створення</h3>
+            <input type="date" id="inputDate" />
+          </label>
+          <label for="inputSelect">
+            <h3>Категория</h3>
+            <select name="category" id="inputSelect">
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
+            </select>
+          </label>
+          <label for="inputDescription">
+            <h3>Опис</h3>
+            <input type="text" id="inputDescription" />
+          </label>
+          <label for="inputDateEnd">
+            <h3>Дата закінчення</h3>
+            <input type="date" id="inputDateEnd" />
+          </label>
+          <button>Add</button>
+        </form>
+        <button class="btn-close">X</button>
+      </div>
+      <div class="overlay"></div>
     </div>
     <script src="./main.js"></script>
   </body>
