@@ -17,46 +17,16 @@
           <p>Content</p>
           <p>Dates</p>
           <ul>
-            <li><button>archive</button></li>
-            <li><button>delete all</button></li>
+            <li><button class="all-btn">all</button></li>
+            <li><button class="archive-btn">archive</button></li>
+            <li><button class="clear-btn">delete all</button></li>
           </ul>
         </div>
 
         <div class="content">
-          <div class="todos">
-            <div class="item">
-              <div class="title">
-                <img src="./img/cartIcon.png" alt="cart" />
-                <h2>Shoping List</h2>
-              </div>
-              <time datetime="2022-09-13 13:00">13.09.22</time>
-              <p>Task</p>
-              <p>Description</p>
-              <time datetime="2022-09-13 13:00">13.09.22</time>
-              <ul>
-                <li><button>edit</button></li>
-                <li><button>archive</button></li>
-                <li><button>delete</button></li>
-              </ul>
-            </div>
-            <div class="item">
-              <div class="title">
-                <img src="./img/cartIcon.png" alt="cart" />
-                <h2>Shoping List</h2>
-              </div>
-              <time datetime="2022-09-13 13:00">13.09.22</time>
-              <p>Task</p>
-              <p>Description</p>
-              <time datetime="2022-09-13 13:00">13.09.22</time>
-              <ul>
-                <li><button>edit</button></li>
-                <li><button>archive</button></li>
-                <li><button>delete</button></li>
-              </ul>
-            </div>
-          </div>
-          <button class="create-btn">Create Note</button>
+          <div class="todos"></div>
         </div>
+        <button class="open-modal-button">Create Note</button>
       </div>
       <div class="archive">
         <div class="header">
@@ -64,22 +34,13 @@
           <p>Active</p>
           <p>Archived</p>
         </div>
-        <div class="archiveToDos">
-          <div class="item">
-            <div class="title">
-              <img src="./img/cartIcon.png" alt="cart" />
-              <h2>Task</h2>
-            </div>
-            <p>13</p>
-            <p>4</p>
-          </div>
-        </div>
+        <div class="archiveToDos"></div>
       </div>
     </div>
 
     <div class="modal">
       <div class="modal-window">
-        <form action="#">
+        <form action="post" id="form">
           <h2>Add list item</h2>
           <label for="inputTitle">
             <h3>Заголовок</h3>
@@ -109,7 +70,7 @@
             <h3>Дата закінчення</h3>
             <input type="date" id="inputDateEnd" />
           </label>
-          <button>Add</button>
+          <button class="add-post-button" type="button">Add</button>
         </form>
         <button class="btn-close">X</button>
       </div>
