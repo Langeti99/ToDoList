@@ -50,10 +50,6 @@
               id="inputTitle"
             />
           </label>
-          <label for="inputDate">
-            <h3>Дата створення</h3>
-            <input type="date" id="inputDate" />
-          </label>
           <label for="inputSelect">
             <h3>Категория</h3>
             <select name="category" id="inputSelect">
@@ -75,6 +71,43 @@
         <button class="btn-close">X</button>
       </div>
       <div class="overlay"></div>
+    </div>
+
+    <div class="edit">
+      <div class="edit-window">
+        <form action="post" id="form">
+          <form action="post" id="form">
+            <h2>Add list item</h2>
+            <label for="inputEditTitle">
+              <h3>Заголовок</h3>
+              <input
+                type="text"
+                placeholder="Введіть заголовок"
+                id="inputEditTitle"
+              />
+            </label>
+            <label for="inputEditSelect">
+              <h3>Категория</h3>
+              <select name="category" id="inputEditSelect">
+                <option value="Task">Task</option>
+                <option value="Random Thought">Random Thought</option>
+                <option value="Idea">Idea</option>
+              </select>
+            </label>
+            <label for="inputEditDescription">
+              <h3>Опис</h3>
+              <input type="text" id="inputEditDescription" />
+            </label>
+            <label for="inputEditDateEnd">
+              <h3>Дата закінчення</h3>
+              <input type="date" id="inputEditDateEnd" />
+            </label>
+            <button class="edit-button" type="button">Edit</button>
+          </form>
+        </form>
+        <button class="btn-close-edit">X</button>
+      </div>
+      <div class="edit-overlay"></div>
     </div>
     <script src="./main.js"></script>
   </body>

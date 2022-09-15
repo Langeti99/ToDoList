@@ -97,7 +97,8 @@ time {
 
 /* Modal */
 
-.modal {
+.modal,
+.edit {
   position: fixed;
   top: 0;
   left: 0;
@@ -107,8 +108,8 @@ time {
   align-items: center;
   justify-content: center;
 }
-
-.modal .overlay {
+.modal .overlay,
+.edit .edit-overlay {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -120,7 +121,8 @@ time {
   z-index: 0;
 }
 
-.modal-window {
+.modal-window,
+.edit-window {
   position: relative;
   z-index: 2;
   width: 400px;
@@ -130,7 +132,8 @@ time {
   padding: 30px;
 }
 
-.modal-window form {
+.modal-window form,
+.edit-window form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -138,13 +141,17 @@ time {
   gap: 10px;
 }
 
-.modal-window label {
+.modal-window label,
+.edit-window label {
   width: 100%;
 }
 
 .modal-window input,
 .modal-window select,
-.modal-window > form button {
+.modal-window > form button,
+.edit-window input,
+.edit-window select,
+.edit-window > form button {
   cursor: pointer;
   width: 100%;
   border-radius: 5px;
@@ -152,7 +159,8 @@ time {
   padding: 10px;
 }
 
-.btn-close {
+.btn-close,
+.btn-close-edit {
   border: none;
   cursor: pointer;
   background-color: none;
